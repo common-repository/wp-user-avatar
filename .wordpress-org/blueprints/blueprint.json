@@ -1,0 +1,36 @@
+{
+	"landingPage": "/wp-admin/admin.php?page=ppress-dashboard",
+	"features": {
+        "networking": true
+    },
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+            "step": "installTheme",
+            "themeZipFile": {
+                "resource": "wordpress.org/themes",
+                "slug": "page-builder-framework"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "users_can_register": "1",
+                "wpbf_activation_notice_dismissed": "1"
+            }
+        },
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+			  "IS_PLAYGROUND_PREVIEW": true
+			}
+		}
+	]
+}
